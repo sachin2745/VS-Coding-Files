@@ -17,7 +17,7 @@ nums.forEach((a,i) => {sum2+=a; console.log(i,a);});
 console.log(sum2);
 
 console.log("-------");
-//get some of all elements on even indexes
+//get sum of all elements on even indexes
 
 let sum3=0;
 nums.forEach((a,i)=>{

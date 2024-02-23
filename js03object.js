@@ -19,8 +19,8 @@ console.log(user);
 
 console.log(Object.keys(user));
 console.log(Object.values(user));
-
-//new one
+console.log("------------");
+//new example
 
 const smartphone={
     brand:'Samsung',
@@ -40,7 +40,7 @@ console.log(smartphone.color);
 
 smartphone.color.push('yellow');
 console.log(smartphone.color);
-
+console.log("------------");
 //new ep
 
 const myphone={
@@ -53,8 +53,8 @@ const myphone={
 };
 console.log(myphone.varient);
 console.log(myphone.varient['12GB']);
-
-//array into object
+console.log("------------");
+//Object into array
 
 const phoneList=[
    {brand:'Samsung', model:'m32', price:45000},
