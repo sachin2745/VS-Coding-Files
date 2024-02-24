@@ -57,7 +57,7 @@ console.log("------------");
 //Object into array
 
 const phoneList=[
-   {brand:'Samsung', model:'m32', price:45000},
+   {brand:'Samsung', model:'Galaxy m32', price:45000},
    {brand:'Oneplus',model:'m32', price:45000},
    {brand:'Infinix',model:'i32', price:45000},
    {brand:'Vivo' , model:'v7', price:45000},
@@ -66,10 +66,17 @@ console.log(phoneList.length);
 //code to find price of second smartphone
 console.log(phoneList[1].price);
 //code to change model of last smartphone
-phoneList[phoneList.length-1].model='v9';
+phoneList[phoneList.length-1].model='V9';
 console.log(phoneList);
 
 //find sum of all prices
-
+const sum = phoneList.reduce((accumulator, object) => {
+    return accumulator + object.price;
+  }, 0);
+  
+  console.log(sum);
 
 //get models of all smartphones in an array
+let modelArray = phoneList.map(obj => obj.model);
+
+console.log(modelArray);
