@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Design</title>
+    <style>
+        #app{
+            overflow: hidden;
+            color: #ffffff;
+            font-family: 'Montserrat',sans-serif;
+            text-align: center;
+            text-shadow: 0 0 5px #ffffff, 0 0 20px #000,0 0 30px #000;
+        }
+        #app a{
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+        #app canvas{
+            display: block;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="hero">
+            <h1>@Sachin_kumar</h1>
+        </div>
+    </div>
+    <script type="module">
+        import{particlesCursor} from
+        const pc= particlesCursor({
+            el:document.getElementById('app'),
+            gpgpuSize:512,
+            colors:[0x1d9ae8,0x1d9ae8],
+            color:0x0000ff,
+            coordScale:0.15,
+        });
+    </script>
+</body>
+
+</html>
