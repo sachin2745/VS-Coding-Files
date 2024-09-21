@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Franchise - Jugnoo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- HEADER STYLE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+        .img-fluid {
+            max-width: 100%;
+            height: 39px;
+            width: auto;
+        }
+
+        /* General outer container styling */
+        .outerContainer {
+            padding-left: 58px;
+            padding-right: 58px;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            .outerContainer {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+
+
+            .navbar-collapse {
+                justify-content: space-between;
+            }
+
+            .img-fluid {
+                max-width: 100%;
+                height: 29px;
+                width: auto;
+            }
+        }
+
+        /* Cross Icon for Burger */
+        .navbar-toggler {
+            position: relative;
+            border: none;
+        }
+
+        .navbar-toggler.collapsed .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z"/%3E%3C/svg%3E');
+        }
+
+        .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x-lg" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 1 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/%3E%3C/svg%3E');
+        }
+
+        /* Button Styling */
+        .section_btn {
+            display: inline-flex;
+            border-radius: 5px;
+            font-family: 'Epilogue', sans-serif;
+            padding: 12px 30px;
+            background-image: linear-gradient(105deg, #efa645, #e85d7b 102%);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        .section_btn:hover {
+            background-image: linear-gradient(105deg, #ffffff, #ffffff 102%);
+            color: #e85d7b;
+        }
+
+        /* Anchor tag styling */
+        a {
+            text-decoration: none !important;
+            outline: none !important;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* Franchise link hover styling */
+        .ba {
+            color: white;
+            display: inline-block;
+            padding: 10px 1px;
+            position: relative;
+        }
+
+        .ba:hover {
+            color: #e85d7b;
+        }
+
+        .ba:after {
+            bottom: 9px;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            background: #fff;
+            transition: width 0.4s ease;
+            width: 0;
+        }
+
+        .ba:hover:after {
+            background: #e85d7b;
+            width: 100%;
+            left: 0;
+        }
+
+        /* Franchise class adjustment */
+        .franchise {
+            margin-right: 100px;
+            font-family: 'Epilogue', sans-serif;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        .FranchiseFtCTA h2 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: 0.3px;
+            padding: 0px 0px 5px;
+        }
+
+        .FranchiseFtCTA p {
+            line-height: 1.55;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Epilogue;
+            padding: 0px 0px 20px;
+
+        }
+
+        .FranchiseFtCTA .btn1 {
+            background-image: linear-gradient(105deg, #efa645, #e85d7b 102%);
+            color: #fff;
+            font-family: Epilogue;
+        }
+
+        @media (max-width: 991px) {
+            .FranchiseFtCTA h2 {
+                font-size: 26px;
+            }
+
+            .FranchiseFtCTA p {
+                font-size: 16px;
+
+            }
+        }
+
+        .stats {
+            background-image: linear-gradient(281deg, #f48151, #e85d7b) !important;
+            padding: 25px 0px !important;
+            font-family: Epilogue;
+        }
+
+        @media (max-width: 991px) {
+            .stats {
+                padding: 20px 0px !important;
+            }
+        }
+
+        .stats strong {
+            display: block;
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #202025;
+        }
+
+        .stats p {
+            color: #686a6c;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .stats img {
+            filter: brightness(8.5);
+        }
+
+        .hightxt {
+            display: block;
+            color: #000000;
+            opacity: 0.8;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+            font-family: Epilogue;
+        }
+
+        .jugnooFranchise-sec4 h2.smTxtHead {
+            padding: 5px 0px;
+        }
+
+        .smTxtHead {
+            color: #314E52;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.35;
+            padding: 5px 0px 45px;
+        }
+
+        .jugnooFranchise-sec4 h3 {
+            padding: 0px 0px 60px;
+            font-weight: 600;
+            color: #0000;
+            background-image: linear-gradient(281deg, #efa645, #e85d7b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 26px;
+            line-height: 1.5;
+        }
+
+        .jugnooFranchise-sec4 h4 {
+            padding: 60px 0px 25px;
+            font-size: 26px;
+            width: 70%;
+            margin: auto;
+            font-weight: 700;
+            line-height: 1.45;
+            color: #000000;
+        }
+
+        .jugnooFranchise-sec4 img {
+            margin: auto;
+            height: 100px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .jugnooFranchise-sec4 strong {
+            display: block;
+            font-size: 20px;
+            color: #314E52;
+            line-height: 1.5;
+            padding: 20px 0px 10px;
+            font-weight: 700;
+        }
+
+        .jugnooFranchise-sec4 p {
+            margin: auto;
+            font-size: 16px;
+            color: #000000;
+            opacity: 0.6;
+            font-weight: 500;
+            line-height: 1.67;
+        }
+
+        @media (max-width: 991px) {
+
+            .hightxt {           
+            font-size: 16px;
+                  }
+
+            .smTxtHead {               
+                font-size: 26px;              
+            }
+
+            .jugnooFranchise-sec4 h3 {
+                padding: 0px 0px 35px ;               
+                font-size: 18px;               
+            }
+
+            .jugnooFranchise-sec4 h4 {
+                padding: 15px 15px 10px;
+                font-size: 22px;
+                width: 100%;               
+            }
+
+            .jugnooFranchise-sec4 img {
+                margin: auto;
+                height: 70px;
+            }
+
+            img {
+                height: auto;
+                max-width: 100%;
+                vertical-align: middle;
+            }
+
+            .jugnooFranchise-sec4 strong {               
+                font-size: 18px;               
+                padding: 15px 0px 5px ;             
+            }
+
+            .jugnooFranchise-sec4 p {                
+                font-size: 14px;
+                padding: 0px 0px 35px ; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> NAVBAR <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container py-1">
+                <div class="d-flex align-items-center outerContainer">
+                    <a class="navbar-brand" aria-current="page" href="#">
+                        <img src="images/jugnoowhite-logo-1.png" alt="Jugnoo White Logo" class="img-fluid">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler shadow-none collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ms-auto">
+                        <a href="#" class="ba franchise align-items-center">Franchise</a>
+                        <button class="section_btn btn"><a href="#">Get Help</a></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> INVEST IN SUCCESS <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section>
+            <div class="jugnooFranchise-sec4 text-center py-5 px-1">
+                <div class="container ">
+                    <span class="hightxt">Invest in Success</span>
+                    <h2 class="smTxtHead">No Commission Until You Profit</h2>
+                    <h3 class="">Jugnoo's approach to franchising is built around your financial success:</h3>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                            <img src="images/Zero-Initial-Commission-Img.png" alt="">
+                            <strong>
+                                Zero Initial Commission
+                            </strong>
+                            <p>
+                                We don't take any commission until you've fully recovered your yearly licensing fee.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                            <img src="images/Set-the-Commission-Rates.png" alt="">
+                            <strong>
+                                You Set the Commission Rates
+                            </strong>
+                            <p>
+                                With our consent, decide the commission percentage for each ride based on the vehicle
+                                type.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                            <img src="images/Efficient-Financial-Handling-Img.png" alt="">
+                            <strong>
+                                Efficient Financial Handling
+                            </strong>
+                            <p>
+                                Transparent and timely financial processes ensure you're always in the loop about your
+                                earnings.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <h4>Our commission model is designed to prioritize your break-even and profitability. As you
+                            grow,
+                            we grow.</h4>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> STATs <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section>
+            <div class="stats ">
+                <div class="container px-2 px-lg-5">
+                    <div class="mx-auto text-center">
+                        <div class="row g-3 text-center">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">35M</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/car1.svg" alt=" Rides Image" style="color: white;">
+                                        Rides
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">20+</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/Vector.svg" alt=" CitiesImage">
+                                        Cities
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">8.5M</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/profile.svg" alt="Users Image">
+                                        Users
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">125k</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/Group.svg" alt="Drivers on Board Image">
+                                        Drivers on Board
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> FranchiseFtCTA <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section class="text-white bg-dark FranchiseFtCTA">
+            <div class="container py-5 ">
+                <div class="text-center w-100 mb-4">
+                    <h2 class=" mb-1 text-white">Franchise Slots Filling Fast!</h2>
+                    <p class="mx-auto  ">
+                        Don't miss out on leading the e-rickshaw revolution in your city.
+                        <br>
+                        Secure your spot in Jugnoo's growing network now.
+                    </p>
+                    <button class="btn  py-3 px-4 fw-bold rounded-5 btn1">Secure Your Spot</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
