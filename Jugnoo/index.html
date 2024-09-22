@@ -10,6 +10,8 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- HEADER STYLE -->
     <style>
@@ -20,24 +22,28 @@
             height: 39px;
             width: auto;
         }
+       
 
-        /* General outer container styling */
-        .outerContainer {
-            padding-left: 58px;
-            padding-right: 58px;
+        .navbar .container {
+            margin: 0 168px;
+            
         }
+
+
 
         /* Media Query for Mobile */
         @media (max-width: 768px) {
+
+            .navbar .container {
+                margin: 0;
+            }
+
             .outerContainer {
                 display: flex;
                 justify-content: space-between;
                 padding-left: 15px;
                 padding-right: 15px;
             }
-
-
-
 
             .navbar-collapse {
                 justify-content: space-between;
@@ -69,10 +75,10 @@
             display: inline-flex;
             border-radius: 5px;
             font-family: 'Epilogue', sans-serif;
-            padding: 12px 30px;
+            padding: 13px 35px;
             background-image: linear-gradient(105deg, #efa645, #e85d7b 102%);
             color: #fff;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             transition: all 0.3s ease;
             text-transform: uppercase;
@@ -83,6 +89,29 @@
         .section_btn:hover {
             background-image: linear-gradient(105deg, #ffffff, #ffffff 102%);
             color: #e85d7b;
+        }
+
+        .navButton {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media(max-width: 991px) {
+            .section_btn {
+                display: inline-flex;
+                border-radius: 5px;
+                padding: 10px 20px;
+                background-image: linear-gradient(105deg, #efa645, #e85d7b 102%);
+                color: #fff;
+                font-size: 13px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+
+                border: none;
+            }
         }
 
         /* Anchor tag styling */
@@ -129,16 +158,19 @@
         }
     </style>
 
+    <!-- MAIN -->
     <style>
         body {
             font-family: 'Epilogue', sans-serif;
         }
+
         @media(max-width:991px) {
-            body{
+            body {
                 font-size: 14px;
                 scroll-behavior: smooth;
             }
         }
+
 
         .FranchiseFtCTA h2 {
             font-size: 40px;
@@ -281,6 +313,10 @@
             line-height: 1.67;
         }
 
+        .jugnooFranchise-sec4 .row {
+            margin: 0 68px;
+        }
+
         @media (max-width: 991px) {
 
             .hightxt {
@@ -307,6 +343,10 @@
                 height: 70px;
             }
 
+            .jugnooFranchise-sec4 .row {
+                margin: 0px;
+            }
+
             img {
                 height: auto;
                 max-width: 100%;
@@ -329,11 +369,19 @@
             padding: 60px 0px;
             text-align: center;
             background-image: linear-gradient(281deg, #efa645, #e85d7b);
+
         }
 
 
         .jugnooFranchise-sec3 .container {
             position: relative;
+
+        }
+
+        .jugnooFranchise-sec3 .row {
+            margin-right: 67px;
+            margin-left: 67px;
+
         }
 
         .flexCenterItems {
@@ -424,6 +472,8 @@
 
         .jugnooFranchise-sec3 {
             padding: 40px 0px;
+            margin-right: 0px;
+            margin-left: 0px;
         }
 
         .ctaLayoutJn h3 {
@@ -435,14 +485,15 @@
         .ctaLayoutJn {
             padding: 0px 15px;
         }
+
         .btnJugnoo {
-    padding: 12px 30px 11px;
-    display: inline-block;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.4s;
-    cursor: pointer;
-}
+            padding: 12px 30px 11px;
+            display: inline-block;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.4s;
+            cursor: pointer;
+        }
 
         .jugnooFranchise-sec3 ul {
             padding: 0px 0px 25px;
@@ -461,19 +512,586 @@
             .jugnooFranchise-sec3 ul li img {
                 max-height: 100px;
             }
-            ctaLayoutJn {
-        padding: 0px 15px;
-    }
+
+            .ctaLayoutJn {
+                padding: 0px 15px;
+            }
+
+            .jugnooFranchise-sec3 .row {
+                margin-right: 0px;
+                margin-left: 0px;
+
+            }
+        }
+
+        .jugnooFranchise-sec2 {
+            background: #ffffff;
+            padding: 60px 0px 30px;
+            position: relative;
+            z-index: 0;
+            margin-right: 165px;
+            margin-left: 165px;
+        }
+
+        .flexCenterItems {
+            align-items: center;
+        }
+
+        .flexBxMain {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+        .jugnooFranchise-sec2:before {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 50%;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            bottom: 0px;
+            border-radius: 10px 10px 0px 0px;
+            background-image: linear-gradient(281deg, #f48151, #e85d7b);
+            z-index: -1;
+        }
+
+        .jugnooFranchise-sec2 ul {
+            padding: 0px;
+            margin: auto;
+        }
+
+        .jugnooFranchise-sec2 ul li {
+            display: block;
+            padding: 0px 0px 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .jugnooFranchise-sec2 ul li p {
+            color: #314E52;
+            font-weight: 700;
+            font-size: 22px;
+            position: relative;
+            margin: auto;
+            padding: 0px 0px 0px 40px;
+            line-height: 1.5;
+            text-transform: capitalize;
+        }
+
+        .jugnooFranchise-sec2 ul li p img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 35px;
+
+        }
+
+
+        .jugnooFranchise-sec2 ul li span {
+            display: block;
+            color: #000000;
+            opacity: 0.6;
+            font-size: 16px;
+            line-height: 1.45;
+            padding: 10px 0px 0px;
+            font-weight: 400;
+        }
+
+        @media(max-width:1199px) {
+
+            .jugnooFranchise-sec2:before {
+                width: 300px;
+            }
+        }
+
+        @media(max-width:991px) {
+            .jugnooFranchise-sec2 ul li p {
+                font-size: 18px;
+                padding: 0px 0px 0px 35px;
+            }
+
+            .orderm1 {
+                order: 1;
+            }
+
+            .orderm2 {
+                order: 2;
+            }
+
+            .orderm3 {
+                order: 3;
+            }
+
+            .jugnooFranchise-sec2 ul li span {
+                font-size: 14px;
+                padding: 10px 0px 0px;
+            }
+
+            .jugnooFranchise-sec2 ul li p img {
+                width: 30px;
+            }
+
+            .jugnooFranchise-sec2 ul li {
+                padding: 0px 0px 25px;
+            }
+
+            .smTxtHead {
+                font-size: 26px;
+                padding: 5px 0px 25px;
+            }
+
+            .jugnooFranchise-sec2:before {
+                display: none;
+            }
+
+
+            .jugnooFranchise-sec2 {
+                padding: 40px 0px 20px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        .jugnooFranchise-sec1 {
+            background: #ffffff;
+            padding: 90px 0px 90px;
+            position: relative;
+            overflow: hidden;
+           
+        }
+
+        .jugnooFranchise-sec1 .row {
+            margin: 0 68px;
+        }
+
+        .jugnooFranchise-sec1:before {
+            content: '';
+            background-image: linear-gradient(281deg, #f48151, #e85d7b);
+            width: 56%;
+            height: 169%;
+            position: absolute;
+            top: -20%;
+            right: -6%;
+            transform: rotate(22deg);
+            z-index: 1;
+        }
+
+        .jugnooFranchise-sec1 h2 {
+            margin: auto;
+            color: #314E52;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .jugnooFranchise-sec1 h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.15;
+            padding: 5px 0px 20px;
+            color: #0000;
+            background-image: linear-gradient(281deg, #efa645, #e85d7b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .jugnooFranchise-sec1 h1 strong {}
+
+        .jugnooFranchise-sec1 p {
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.45;
+        }
+
+        .jugnooFranchise-sec1 span {
+            color: #192224;
+            display: block;
+            padding: 15px 0px 25px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .jugnooFranchise-sec1 a {}
+
+        .jugnooFranchise-sec1 img.rickshawImg {
+            position: relative;
+            z-index: 2;
+            /* Ensure the image comes in front */
+        }
+
+        .jugnooFranchise-sec1 a img {
+            height: 16px;
+            margin-left: 10px;
+
+        }
+
+        @media(max-width:1199px) {
+            .jugnooFranchise-sec1 h1 {
+                font-size: 42px;
+            }
+
+            .jugnooFranchise-sec1 h2 {
+                font-size: 22px;
+            }
+
+        }
+
+        @media(max-width:991px) {
+
+            .jugnooFranchise-sec1 {
+                padding: 105px 0px 55px;
+                text-align: center;
+            }
+
+            .jugnooFranchise-sec1:before,
+            .jugnooFranchise-sec1 p br {
+                display: none;
+            }
+
+            .jugnooFranchise-sec1 .row {
+                margin: 0;
+            }
+
+            .jugnooFranchise-sec1 h2 {
+                font-size: 22px;
+                padding: 15px 0px 0px;
+            }
+
+            .jugnooFranchise-sec1 h1 {
+                font-size: 30px;
+                padding: 5px 0px 10px;
+            }
+
+            .jugnooFranchise-sec1 p,
+            .hightxt {
+                font-size: 16px;
+            }
+        }
+
+        .btn-franchise {
+            background-image: linear-gradient(105deg, #efa645, #e85d7b 102%);
+            color: #ffffff;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .btn-franchise:hover {
+            color: #ffffff;
+            opacity: 0.8;
         }
     </style>
 
+    <style>
+        footer a:hover {
+            color: #f8f9fa;
+            /* Lighten text color on hover */
+        }
+
+        footer .row {
+            padding-top: 60px;
+            margin: 0 68px;
+        }
+
+
+        ul.listingJugnooQuick .menu li a,
+        ul.listingJugnooQuick li a {
+            color: white;
+            transition: 0.4s;
+            font-size: 15px;
+            line-height: 1.43;
+            font-weight: 500;
+            padding: 0px 0px 8px;
+            display: inline-block;
+        }
+
+        ul.listingJugnooQuick .menu li a,
+        ul.listingJugnooQuick li a:hover {
+            color: #e85d7b;
+            transition: 0.4s;
+            font-size: 15px;
+            line-height: 1.43;
+            font-weight: 500;
+            padding: 0px 0px 8px;
+            display: inline-block;
+        }
+
+        /* Adjusting padding for mobile screens */
+        @media (max-width: 767.98px) {
+
+            footer .row {
+                padding-top: 0px;
+                margin: 0px;
+            }
+
+            .footerJugnoo .footertext {
+                text-align: start;
+            }
+
+            .footerJugnoo .text-md-end {
+                text-align: center !important;
+            }
+
+        }
+    </style>
+    <style>
+        .jgnFranMdl {
+            z-index: 999999;
+            background: rgba(0, 0, 0, .5);
+            padding: 0px !important;
+            margin: auto !important;
+        }
+
+        .jgnFranMdl button.close {
+            position: absolute;
+            background: transparent !important;
+            box-shadow: none !important;
+            outline: none !important;
+            opacity: 1;
+        }
+
+        .jgnFranMdl button.close img {}
+
+        .jgnFranMdl .formFranchiseBx {
+            position: relative;
+        }
+
+        .jgnFranMdl .formFranchiseBx:before {
+            content: '';
+        }
+
+        .bxJgnFranchise {
+            padding: 25px 40px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 10px 15px 0 rgb(0 0 0 / 16%);
+        }
+
+        .bxJgnFranchise h3 {
+            font-size: 22px;
+            color: #000000;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.35;
+        }
+
+        .bxJgnFranchise p {
+            color: #000000;
+            opacity: 0.7;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 5px 0px 20px;
+        }
+
+        .bxJgnFranchise form {}
+
+        .bxJgnFranchise form .form-group {
+            margin: 0px auto 20px;
+            position: relative;
+        }
+
+        .bxJgnFranchise form label {
+            font-size: 12px;
+            line-height: 1.35;
+            margin: auto auto 5px;
+            color: #5F6673;
+            display: block;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .bxJgnFranchise form input {
+            height: 42px;
+        }
+
+        .bxJgnFranchise form textarea {
+            height: 85px;
+        }
+
+        .bxJgnFranchise form .inputBxJgn {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 4px;
+            outline: none !important;
+            text-decoration: none !important;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #000000;
+            border: solid 1px #ccd1da;
+            background-color: #fff;
+            font-weight: 500;
+            margin: auto;
+        }
+
+        .bxJgnFranchise form span.errFraJgn {
+            color: #ff0000;
+            font-size: 12px;
+            position: absolute;
+            right: 0px;
+            font-weight: 500;
+            bottom: -17px;
+        }
+
+        .bxJgnFranchise form button {
+            color: #ffffff !important;
+            background-image: linear-gradient(105deg, #efa645, #e85d7b 102%) !important;
+            width: 100%;
+            font-size: 17px;
+            padding: 10px 20px;
+            line-height: 1.4;
+        }
+
+        .bxJgnFranchise form button img {
+            height: 18px;
+            float: right;
+        }
+
+        .jgnFranMdl .modal-dialog {
+            width: 980px;
+            max-width: 100%;
+            margin: 15px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 100%;
+        }
+
+        .jgnFranMdl .modal-content {
+            background: #ffffff;
+            border: 0px !important;
+            border-radius: 4px !important;
+            position: relative;
+        }
+
+        .jgnFranMdl .modal-content:before {
+            content: '';
+            background: linear-gradient(281deg, #efa645, #e85d7b);
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            border-radius: 4px 0px 0px 4px;
+            top: 0px;
+            left: 0px;
+        }
+
+        .jgnFranMdl .modal-body {
+            padding: 20px 30px;
+        }
+
+        .txtJgnFrm {}
+
+        .txtJgnFrm h2 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: auto;
+        }
+
+        .txtJgnFrm h4 {
+            color: #ffffff;
+            padding: 15px 0px 30px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 1.35;
+        }
+
+        .txtJgnFrm h4 span {
+            font-size: 14px;
+            font-weight: 600;
+            font-style: italic;
+            display: inline-block;
+            padding-left: 10px;
+        }
+
+        .txtJgnFrm h4 strong {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .txtJgnFrm ul {
+            padding: 20px 0px 0px;
+            margin: auto;
+            border-top: 1px solid #ffffff;
+            text-align: center;
+        }
+
+        .txtJgnFrm ul li {
+            display: block;
+            width: calc(25% - 20px);
+            margin: 10px;
+            color: #ffffff;
+        }
+
+        .txtJgnFrm ul li strong {
+            display: block;
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        .txtJgnFrm ul li span {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.35;
+            padding: 5px 0px 0px;
+        }
+
+        @media(max-width:991px) {
+            .jgnFranMdl .modal-content:before {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .txtJgnFrm ul {
+                display: none;
+            }
+
+            .txtJgnFrm {
+                text-align: center;
+                padding: 25px 0px 0px;
+            }
+
+            .txtJgnFrm h2 {
+                font-size: 22px;
+            }
+
+            .txtJgnFrm h4 {
+                font-size: 18px;
+                padding: 10px 0px 20px;
+            }
+
+            .bxJgnFranchise h3 {
+                font-size: 20px;
+            }
+
+            .bxJgnFranchise {
+                padding: 25px 20px;
+            }
+
+            .jgnFranMdl .modal-body {
+                padding: 15px 20px;
+            }
+
+            .txtJgnFrm h4 strong {
+                font-size: 26px;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> NAVBAR <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div class="container py-1">
                 <div class="d-flex align-items-center outerContainer">
                     <a class="navbar-brand" aria-current="page" href="#">
@@ -488,21 +1106,143 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex ms-auto">
+                    <div class=" ms-auto navButton">
                         <a href="#" class="ba franchise align-items-center">Franchise</a>
                         <button class="section_btn btn"><a href="#">Get Help</a></button>
                     </div>
                 </div>
             </div>
         </nav>
-    </header>
+    </section>
 
 
     <main>
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> Header <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section class="jugnooFranchise-sec1 ">
+            <div class="container">
+                <div class="row flexCenterItems flexBxMain">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 orderm2">
+                        <h2>Drive Change in Your City</h2>
+                        <h1>Become a <br>Jugnoo Franchise</h1>
+                        <p>Join the movement with India's leading <br>E-Rickshaw, Auto, and Bike rides booking platform.
+                        </p>
+                        <span>Zero emissions, 100% community focus.</span>
+                        <a class="btn-franchise btnJugnoo franchiseJnPbx">Start Your Journey <img
+                                src="https://www.jugnoo.in/wp-content/uploads/2024/02/right.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12 orderm1">
+                        <img src="https://www.jugnoo.in/wp-content/uploads/2024/02/Jugnoo-Franchise-LP-Draft-1-1.png"
+                            alt="" class="rickshawImg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> STATs <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section>
+            <div class="stats ">
+                <div class="container px-2 px-lg-5">
+                    <div class="mx-auto text-center">
+                        <div class="row g-3 text-center">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">35M</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/car1.svg" alt=" Rides Image" style="color: white;">
+                                        Rides
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">20+</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/Vector.svg" alt=" CitiesImage">
+                                        Cities
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">8.5M</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/profile.svg" alt="Users Image">
+                                        Users
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="p-4 bg-opacity-25  ">
+                                    <strong class=" text-white">125k</strong>
+                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
+                                        <img src="images/Group.svg" alt="Drivers on Board Image">
+                                        Drivers on Board
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> Why Jugnoo Franchise <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <section class="jugnooFranchise-sec2 ">
+            <div class="container">
+                <span class="hightxt">Why Jugnoo Franchise</span>
+                <h2 class="smTxtHead">6 Reasons to Become a Jugnoo Franchise</h2>
+                <div class="row flexCenterItems flexBxMain">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 orderm2">
+                        <ul>
+                            <li>
+                                <p><img src="images/jugnooImg-1.png" alt="">Brand & Vision</p>
+                                <span>With over 20 cities served, Jugnoo is recognized for its high brand equity and
+                                    extensive marketing reach.</span>
+                            </li>
+                            <li>
+                                <p><img src="images/jugnooImg-2.png" alt="">Low Investment & High returns</p>
+                                <span>With a minimum investment of INR 70,000, Jugnoo provides marketing, operational
+                                    support, and cutting-edge technology, leading to increased profits every
+                                    month.</span>
+                            </li>
+                            <li>
+                                <p><img src="images/jugnooImg-3.png" alt="">Large user base</p>
+                                <span>Over 8.5 million users trust Jugnoo, with more than 35 million rides and 125K
+                                    drivers.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center orderm1">
+                        <img src="images/jugnooAutoImg-1.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 orderm3">
+                        <ul>
+                            <li>
+                                <p><img src="images/jugnooImg-4.png" alt="">Technology</p>
+                                <span>Benefit from our advanced user and driver apps, offering ease of use, in-app
+                                    support, and seamless payment options.</span>
+                            </li>
+                            <li>
+                                <p><img src="images/jugnooImg-5.png" alt="">Marketing & Promotions</p>
+                                <span>With the name Jugnoo, you'll enter the market with visibility from day one, backed
+                                    by promotional campaigns to enhance operations in your city.</span>
+                            </li>
+                            <li>
+                                <p><img src="images/jugnooImg-6.png" alt="">Training and Support</p>
+                                <span>Receive training and support from the Jugnoo team to efficiently manage your
+                                    franchise operations, maintain ride history, and much more.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> Your Path to Success with Jugnoo <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
         <section class="jugnooFranchise-sec3">
             <div class="container">
-                <span class="hightxt" style="color:#ffffff;">Your Path to Success with Jugnoo</span>
+                <span class="hightxt text-white">Your Path to Success with Jugnoo</span>
                 <h2 class="smTxtHead" style="color:#ffffff;opacity:0.9;">Simple Steps to Start Earning</h2>
                 <div class="row">
                     <ul class="flexCenterItems flexBxMain">
@@ -587,57 +1327,10 @@
 
         </section>
 
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> STATs <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-        <section>
-            <div class="stats ">
-                <div class="container px-2 px-lg-5">
-                    <div class="mx-auto text-center">
-                        <div class="row g-3 text-center">
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="p-4 bg-opacity-25  ">
-                                    <strong class=" text-white">35M</strong>
-                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
-                                        <img src="images/car1.svg" alt=" Rides Image" style="color: white;">
-                                        Rides
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="p-4 bg-opacity-25  ">
-                                    <strong class=" text-white">20+</strong>
-                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
-                                        <img src="images/Vector.svg" alt=" CitiesImage">
-                                        Cities
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="p-4 bg-opacity-25  ">
-                                    <strong class=" text-white">8.5M</strong>
-                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
-                                        <img src="images/profile.svg" alt="Users Image">
-                                        Users
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3">
-                                <div class="p-4 bg-opacity-25  ">
-                                    <strong class=" text-white">125k</strong>
-                                    <p class="text-white d-flex flex-wrap align-items-center gap-1">
-                                        <img src="images/Group.svg" alt="Drivers on Board Image">
-                                        Drivers on Board
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </section>
 
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> FranchiseFtCTA <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-        <section class="text-white bg-dark FranchiseFtCTA">
+        <section class="text-white FranchiseFtCTA" style="background-color: #000000;">
             <div class="container py-5 ">
                 <div class="text-center w-100 mb-4">
                     <h2 class=" mb-1 text-white">Franchise Slots Filling Fast!</h2>
@@ -646,16 +1339,184 @@
                         <br>
                         Secure your spot in Jugnoo's growing network now.
                     </p>
-                    <button class="btn  py-3 px-4 fw-bold rounded-5 btn1">Secure Your Spot</button>
+                    <button class="btn  py-3 px-4 fw-bold rounded-5 btn1 btn-franchise btnJugnoo franchiseJnPbx"
+                        data-toggle="modal" data-target="#jugnooFranchiseModal">Secure Your Spot</button>
                 </div>
 
             </div>
         </section>
 
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> Franchise Modal <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+        <!-- Modal Structure -->
+        <div id="jugnooFranchiseModal" class="modal fade jgnFranMdl" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="formFranchiseBx">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                style="background: none; border: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 4.646a.75.75 0 0 1 1.06 0L8 6.939l2.293-2.293a.75.75 0 0 1 1.06 1.06L9.061 8l2.293 2.293a.75.75 0 1 1-1.06 1.06L8 9.061l-2.293 2.293a.75.75 0 0 1-1.06-1.06L6.939 8 4.646 5.707a.75.75 0 0 1 0-1.06z" />
+                                </svg>
+                            </button>
+
+                            <div class="row flexCenterItems flexBxMain">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="txtJgnFrm">
+                                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Find
+                                            out how you can shape ride booking experience in your city by becoming
+                                            a Jugnoo Franchise Owner</h2>
+                                        <h4>Subscription Starts <strong>@ ₹70,000</strong> for Indian
+                                            Cities<span>(Exclusive of GST)</span></h4>
+                                        <ul class="flexCenterItems flexBxMain">
+                                            <li>
+                                                <strong>35M</strong>
+                                                <span>Rides</span>
+                                            </li>
+                                            <li>
+                                                <strong>20+</strong>
+                                                <span>Cities</span>
+                                            </li>
+                                            <li>
+                                                <strong>8.5M</strong>
+                                                <span>Users</span>
+                                            </li>
+                                            <li>
+                                                <strong>125K</strong>
+                                                <span>Drivers on Board</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="bxJgnFranchise">
+                                        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                            Register for Jugnoo Franchise Today</h3>
+                                        <p>Our experts will contact you shortly</p>
+                                        <form id="jgnFormFranchiseInd" method="POST">
+                                            <div class="form-group">
+                                                <label>Your Name*</label>
+                                                <input type="text" id="franJgnName" class="form-control inputBxJgn"
+                                                    placeholder="Dinesh Kumar">
+                                                <span class="errFraJgn errFName"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email Address*</label>
+                                                <input type="text" id="franJgnEmail" class="form-control inputBxJgn"
+                                                    placeholder="dinesh@jugnoo.in">
+                                                <span class="errFraJgn errFEmail"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Phone Number*</label>
+                                                <input type="text" id="franJgnPhone" class="form-control inputBxJgn"
+                                                    placeholder="+91234567890"
+                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                                <span class="errFraJgn errFPhone"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>City you want Jugnoo Franchise For*</label>
+                                                <input type="text" id="franJgnCity" class="form-control inputBxJgn"
+                                                    placeholder="Chandigarh">
+                                                <span class="errFraJgn errFCity"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>What Motivated you to join Jugnoo Franchise?*</label>
+                                                <textarea id="franJgnMsg" class="form-control inputBxJgn"
+                                                    placeholder="Please share here"></textarea>
+                                                <span class="errFraJgn errFMsg"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" class="btn-franchise btnJugnoo"
+                                                    id="btnJugnooFranSub">Register Now <img
+                                                        src="/wp-content/uploads/2024/02/right.png" alt=""></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
+
+
     <footer>
-        <!-- place footer here -->
+        <section class="footerJugnoo bg-black text-white border-top border-secondary">
+            <div class="container py-3">
+                <div class="row">
+                    <!-- Logo and Social Links -->
+                    <div class="col-lg-3 col-md-6 mb-4 footertext">
+                        <img src="https://www.jugnoo.in/wp-content/uploads/2023/04/jugnoowhite-logo-1.png"
+                            alt="Jugnoo Logo" class="img-fluid mb-3">
+                        <div class="d-flex">
+                            <a href="https://www.facebook.com/jugnoose" target="_blank" class="me-2"><img
+                                    src="https://www.jugnoo.in/wp-content/uploads/2023/04/facebook-icon.svg"
+                                    alt="Facebook" width="40"></a>
+                            <a href="https://twitter.com/jugnoose" target="_blank" class="me-2"><img
+                                    src="https://www.jugnoo.in/wp-content/uploads/2023/04/twitter-icon.svg"
+                                    alt="Twitter" width="40"></a>
+                            <a href="https://instagram.com/jugnoo_india?igshid=1jtfmu9km3x0q" target="_blank"
+                                class="me-2"><img
+                                    src="https://www.jugnoo.in/wp-content/uploads/2023/04/instagram-icon.svg"
+                                    alt="Instagram" width="40"></a>
+                            <a href="https://www.linkedin.com/company/jugnoo/" target="_blank"><img
+                                    src="https://www.jugnoo.in/wp-content/uploads/2023/04/linkedin-icon.svg"
+                                    alt="LinkedIn" width="40"></a>
+                        </div>
+                    </div>
+                    <!-- About Us Links -->
+                    <div class="col-lg-3 col-md-6 mb-4 footertext">
+                        <h5>About Us</h5>
+                        <ul class="list-unstyled listingJugnooQuick">
+                            <li><a href="https://www.jugnoo.in/investors/">Investors</a></li>
+                            <li><a href="https://www.jugnoo.in/about-us/">About Us</a></li>
+                            <li><a href="https://www.jugnoo.in/media-kit/">Media Kit</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6 mb-4 footertext">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled listingJugnooQuick">
+                            <li><a href="https://jungleworks.zohorecruit.in/jobs/Careers" target="_blank"
+                                    rel="noopener">Career</a></li>
+                            <li><a href="https://www.jugnoo.in/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="https://www.jugnoo.in/terms-and-conditions/">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us -->
+                    <div class="col-lg-3 col-md-6 mb-4 footertext">
+                        <h5>Contact Us</h5>
+                        <p>4830, West Kennedy Blvd Suite 600, Tampa Florida, 33609, USA</p>
+                        <p>Plot No 10, 1st Floor, IT Park, Chandigarh, India</p>
+                        <a href="mailto:support@jugnoo.in" class="text-white">support@jugnoo.in</a>
+                    </div>
+                </div>
+                <!-- Copyright and App Links -->
+                <div class="row pt-4 mt-4 border-top border-secondary text-center text-md-start ">
+                    <div class="col-md-6 mb-3 mb-md-0 ">
+                        <h6>© 2024 Socomo Technologies Pvt Ltd. All Rights Reserved.</h6>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://apps.apple.com/in/app/jugnoo/id882391317" target="_blank"><img
+                                src="https://www.jugnoo.in/wp-content/uploads/2023/04/appStore.svg" alt="App Store"
+                                class="me-2" width="120"></a>
+                        <a href="https://play.google.com/store/apps/details?id=product.clicklabs.jugnoo"
+                            target="_blank"><img src="https://www.jugnoo.in/wp-content/uploads/2023/04/googleplay.svg"
+                                alt="Google Play" width="120"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
