@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D FlipBook</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0; /* Light background for better contrast */
+      height: 100vh;
+    }
+
+    .flip-book-container {
+      width: 90%;
+      height: 90%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Including necessary scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/pdf.min.js"></script>
+  <script src="js/3dflipbook.min.js"></script>
+
+  <!-- Flipbook container -->
+  <div class="flip-book-container" data-src="https://www.selfstudys.com/sitepdfs/I2rhzb5PstdvxQ8cWNwX">
+  </div>
+
+  <script>
+    // Initialize the 3D FlipBook
+    $(document).ready(function () {
+      $('.flip-book-container').FlipBook({
+        pdf: $('.flip-book-container').data('src'), // Dynamically load PDF
+        webgl: true, // Enable WebGL rendering
+        propertiesCallback: function (props) {
+          props.cover.padding = 0.01; // Adjust padding for better visuals
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
