@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyperDash Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <section>
+      <header class="text-white body-font bg-[#191919] inter">
+        <div
+          class="container mx-auto flex items-center justify-between p-6 max-w-[87rem]"
+        >
+          <nav class="hidden md:flex gap-6 lg:gap-16 text-[17px] leading-8">
+            <a href="#">Air X</a>
+            <a href="#">Lexo Z</a>
+            <a href="#">Gravity 9</a>
+          </nav>
+
+          <a class="flex items-center">
+            <img src="Images/Logo.png" alt="HyperDash_Logo" class="h-9" />
+          </a>
+
+          <div class="hidden md:flex gap-6 lg:gap-16 items-center">
+            <a href="#">Shop</a>
+            <a href="#">Account</a>
+          </div>
+
+          <button
+            id="menuButton"
+            class="md:hidden p-2 rounded focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="25"
+              viewBox="0 0 128 128"
+            >
+              <path
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-width="7"
+                d="M21 65H107M21 96H107M21 33L107 33"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col items-center gap-4 bg-[#222222] py-4 transition-all duration-300"
+        >
+          <a href="#" class="text-white text-[17px]">Air X</a>
+          <a href="#" class="text-white text-[17px]">Lexo Z</a>
+          <a href="#" class="text-white text-[17px]">Gravity 9</a>
+          <a href="#" class="text-white text-[17px]">Shop</a>
+          <a href="#" class="text-white text-[17px]">Account</a>
+        </div>
+      </header>
+
+      <script>
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="relative h-screen w-full inter">
+      <div
+        class="absolute inset-0 bg-cover bg-bottom h-screen"
+        style="background-image: url('Images/HeroImage.png')"
+      ></div>
+
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <button
+          class="bg-transparent border-2 border-white text-white px-3.5 py-1.5 rounded-none text-xs font-normal transition duration-300 hover:bg-white hover:text-black"
+        >
+          Test Drive
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
