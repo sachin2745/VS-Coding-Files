@@ -10,6 +10,10 @@
       .poppins {
         font-family: "Poppins", sans-serif;
       }
+      .keen-slider__slide {
+        max-width: 100% !important;
+        /* min-width: 100% !important; */
+      }
     </style>
   </head>
   <body>
@@ -122,7 +126,7 @@
           class="lg:flex-grow md:w-1/2 flex flex-col md:items-start items-center text-center md:text-left ps-36"
         >
           <h1
-            class="text-4xl sm:text-5xl font-medium text-white leading-tight mb-6"
+            class="text-4xl sm:text-5xl extrafont-light text-white leading-tight mb-6"
           >
             Lexo Z
           </h1>
@@ -224,22 +228,34 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           <div class="p-4">
             <small class="text-white font-normal">Max Power</small>
-            <h2 class="title-font mt-10 font-normal sm:text-5xl text-4xl">1200+</h2>
+            <h2 class="title-font mt-10 font-normal sm:text-5xl text-4xl">
+              1200+
+            </h2>
             <p class="mt-2 text-4xl font-extralight text-white">hp</p>
           </div>
           <div class="p-4">
-            <small class="text-white font-normal">EPA estimated range up to</small>
-            <h2 class="title-font  mt-10 font-normal sm:text-5xl text-4xl">516</h2>
+            <small class="text-white font-normal"
+              >EPA estimated range up to</small
+            >
+            <h2 class="title-font mt-10 font-normal sm:text-5xl text-4xl">
+              516
+            </h2>
             <p class="mt-2 text-4xl font-extralight text-white">mi</p>
           </div>
           <div class="p-4">
-            <small class="text-white font-normal">minutes to charge 200 milesr</small>
-            <h2 class="title-font  mt-10 font-normal sm:text-5xl text-4xl">12</h2>
+            <small class="text-white font-normal"
+              >minutes to charge 200 milesr</small
+            >
+            <h2 class="title-font mt-10 font-normal sm:text-5xl text-4xl">
+              12
+            </h2>
             <p class="mt-2 text-4xl font-extralight text-white">mins</p>
           </div>
           <div class="p-4">
             <small class="text-white font-normal">0-60 mph</small>
-            <h2 class="title-font  mt-10 font-normal sm:text-5xl text-4xl"><2</h2>
+            <h2 class="title-font mt-10 font-normal sm:text-5xl text-4xl">
+              <2
+            </h2>
             <p class="mt-2 text-4xl font-extralight text-white">sec</p>
           </div>
         </div>
@@ -277,6 +293,256 @@
               Learn More
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10 -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+      rel="stylesheet"
+    />
+
+    <script type="module">
+      import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const keenSlider = new KeenSlider("#keen-slider", {
+          loop: true,
+          slides: {
+            origin: "center",
+            perView: 3,
+            spacing: 10,
+          },
+          breakpoints: {
+            "(max-width: 1024px)": {
+              slides: {
+                perView: 2, // Show 2 slides on tablets
+                spacing: 10,
+              },
+            },
+            "(max-width: 768px)": {
+              slides: {
+                perView: 1, // Show 1 slide on mobile
+                spacing: 10,
+              },
+            },
+          },
+        });
+
+        // Ensure buttons exist before adding event listeners
+        const prevButtons = document.querySelectorAll(
+          "#keen-slider-previous, #keen-slider-previous-desktop"
+        );
+        const nextButtons = document.querySelectorAll(
+          "#keen-slider-next, #keen-slider-next-desktop"
+        );
+
+        prevButtons.forEach((btn) =>
+          btn?.addEventListener("click", () => keenSlider.prev())
+        );
+        nextButtons.forEach((btn) =>
+          btn?.addEventListener("click", () => keenSlider.next())
+        );
+      });
+    </script>
+
+    <section class="bg-[#191919] poppins">
+      <div class="container mx-auto max-w-[77rem] py-12 lg:py-16 xl:py-24">
+        <div class="">
+          <div
+            class="flex justify-between text-center ltr:sm:text-left rtl:sm:text-right mb-1 sm:mb-16 p-5 xl:p-0"
+          >
+            <h2
+              class="text-3xl font-normal tracking-tight text-white sm:text-4xl"
+            >
+              Our Stories
+            </h2>
+
+            <div class="hidden lg:flex lg:gap-4">
+              <button
+                aria-label="Previous slide"
+                id="keen-slider-previous-desktop"
+                class="rounded-full  -rotate-180 p-3  transition hover:scale-125 "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xml:space="preserve"
+                  id="left-arrow"
+                  width="30"
+                  height="30"
+                  x="0"
+                  y="0"
+                  version="1.1"
+                  fill="#fff"
+                  viewBox="0 0 92 92"
+                >
+                  <path
+                    id="XMLID_512_"
+                    d="M82.8 48.8l-24.9 25c-.8.8-1.8 1.2-2.8 1.2-1 0-2-.4-2.8-1.2-1.6-1.6-1.6-4.1 0-5.7L70.4 50H12c-2.2 0-4-1.8-4-4s1.8-4 4-4h58.4L52.2 23.8c-1.6-1.6-1.6-4.1 0-5.7 1.6-1.6 4.1-1.6 5.7 0l24.9 25c1.6 1.6 1.6 4.2 0 5.7z"
+                  ></path>
+                </svg>
+              </button>
+
+              <button
+                aria-label="Next slide"
+                id="keen-slider-next-desktop"
+                class="rounded-full  p-3  transition hover:scale-125 "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xml:space="preserve"
+                  id="right-arrow"
+                  width="30"
+                  height="30"
+                  x="0"
+                  y="0"
+                  version="1.1"
+                  fill="#fff"
+                  viewBox="0 0 92 92"
+                >
+                  <path
+                    id="XMLID_512_"
+                    d="M82.8 48.8l-24.9 25c-.8.8-1.8 1.2-2.8 1.2-1 0-2-.4-2.8-1.2-1.6-1.6-1.6-4.1 0-5.7L70.4 50H12c-2.2 0-4-1.8-4-4s1.8-4 4-4h58.4L52.2 23.8c-1.6-1.6-1.6-4.1 0-5.7 1.6-1.6 4.1-1.6 5.7 0l24.9 25c1.6 1.6 1.6 4.2 0 5.7z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class=" poppins">
+            <div id="keen-slider" class="keen-slider sm:p-0">
+              <div class="keen-slider__slide">
+                <div class="w-auto lg:w-[85%] sm:mb-0 mb-6 ">
+                  <div class="rounded-none h-86 overflow-hidden p-5 lg:p-0">
+                    <img
+                      alt="content"
+                      class="object-cover object-center h-full aspect-auto w-96"
+                      src="Images/Story1Img.png"
+                    />
+                    <h4 class="text-white text-lg font-light my-5">
+                      Lorem Ipsum
+                    </h4>
+                    <p class="text-white text-sm font-light mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="keen-slider__slide">
+                <div class="w-auto lg:w-[85%] sm:mb-0 mb-6 ">
+                  <div class="rounded-none h-86 overflow-hidden p-5 lg:p-0">
+                    <img
+                      alt="content"
+                      class="object-cover object-center h-full aspect-auto w-96"
+                      src="Images/Story2Img.png"
+                    />
+                    <h4 class="text-white text-lg font-light my-5">
+                      Lorem Ipsum
+                    </h4>
+                    <p class="text-white text-sm font-light mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide">
+                <div class="w-auto lg:w-[85%] sm:mb-0 mb-6 ">
+                  <div class="rounded-none h-86 overflow-hidden p-5 lg:p-0">
+                    <img
+                      alt="content"
+                      class="object-cover object-center h-full aspect-auto w-96"
+                      src="Images/Story3Img.png"
+                    />
+                    <h4 class="text-white text-lg font-light my-5">
+                      Lorem Ipsum
+                    </h4>
+                    <p class="text-white text-sm font-light mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide">
+                <div class="w-auto lg:w-[85%] sm:mb-0 mb-6 ">
+                  <div class="rounded-none h-full overflow-hidden p-5 lg:p-0">
+                    <img
+                      alt="content"
+                      class="object-cover object-center h-[360px] aspect-auto w-96"
+                      src="Images/Story4Img.png"
+                    />
+                    <h4 class="text-white text-lg font-light my-5">
+                      Lorem Ipsum
+                    </h4>
+                    <p class="text-white text-sm font-light mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-1 flex justify-center gap-4 lg:hidden">
+          <button
+            aria-label="Previous slide"
+            id="keen-slider-previous"
+            class="rounded-full  -rotate-180  p-4  transition hover:scale-125 "
+          >
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xml:space="preserve"
+          id="left-arrow"
+          width="30"
+          height="30"
+          x="0"
+          y="0"
+          version="1.1"
+          fill="#fff"
+          viewBox="0 0 92 92"
+        >
+          <path
+            id="XMLID_512_"
+            d="M82.8 48.8l-24.9 25c-.8.8-1.8 1.2-2.8 1.2-1 0-2-.4-2.8-1.2-1.6-1.6-1.6-4.1 0-5.7L70.4 50H12c-2.2 0-4-1.8-4-4s1.8-4 4-4h58.4L52.2 23.8c-1.6-1.6-1.6-4.1 0-5.7 1.6-1.6 4.1-1.6 5.7 0l24.9 25c1.6 1.6 1.6 4.2 0 5.7z"
+          ></path>
+        </svg>
+          </button>
+
+          <button
+            aria-label="Next slide"
+            id="keen-slider-next"
+            class="rounded-full   p-4  transition hover:scale-125 "
+          >
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xml:space="preserve"
+          id="left-arrow"
+          width="30"
+          height="30"
+          x="0"
+          y="0"
+          version="1.1"
+          fill="#fff"
+          viewBox="0 0 92 92"
+        >
+          <path
+            id="XMLID_512_"
+            d="M82.8 48.8l-24.9 25c-.8.8-1.8 1.2-2.8 1.2-1 0-2-.4-2.8-1.2-1.6-1.6-1.6-4.1 0-5.7L70.4 50H12c-2.2 0-4-1.8-4-4s1.8-4 4-4h58.4L52.2 23.8c-1.6-1.6-1.6-4.1 0-5.7 1.6-1.6 4.1-1.6 5.7 0l24.9 25c1.6 1.6 1.6 4.2 0 5.7z"
+          ></path>
+        </svg>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
